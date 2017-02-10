@@ -15,6 +15,6 @@
             <TextField />
          </children>
       </HBox>
-      <Button mnemonicParsing="false" text="Button" />
+      <Button mnemonicParsing="false" onAction="#getWikipediaPageChanges" text="Button" />
    </children>
 </VBox>
