@@ -24,7 +24,7 @@ import java.util.List;
 
 public class RevisionParser {
 
-    public RevisionParser(String articleName) throws ParserConfigurationException, IOException, SAXException {
+    //public RevisionParser(String articleName) throws ParserConfigurationException, IOException, SAXException {
         /*
         String title = (String)URLEncoder.encode(articleName);
         URL url = new URL("https://en.wikipedia.org/w/api.php?action=query&format=xml&prop=revisions&titles="
@@ -32,29 +32,33 @@ public class RevisionParser {
         URLConnection urlConnection = url.openConnection();
         connection.setRequestProperty("User-Agent", "Revision Tracker/0.1 (http://www.cs.bsu.edu/~pvg/courses/cs222Fa16; me@bsu.edu)");
         */
-        URLConnector urlConnector = new URLConnector();
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = factory.newDocumentBuilder();
-        Document document = builder.parse(urlConnector.establishURLConnection("put a web address in me"));
+        //URLConnector urlConnector = new URLConnector();
 
 
-
+        /*
         List<Revisions> revisionsList = new ArrayList<>();
         NodeList nl = document.getElementsByTagName("rev");
         for (int i = 0; i < nl.getLength(); i++) {
             revisionsList.add(new Revisions((Element)nl.item(i)));
         }
         isRedirected();
+        */
+    //}
 
+    public List<Revisions> parse(InputStream inputStream) throws ParserConfigurationException, IOException, SAXException {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        Document document = builder.parse(inputStream);
+
+        List<Revisions> revisionsList = new ArrayList<>();
+        NodeList nl = document.getElementsByTagName("rev");
+        for (int i = 0; i < nl.getLength(); i++) {
+            revisionsList.add(new Revisions((Element)nl.item(i)));
+        }
+        return revisionsList;
     }
 
-    public List<Revisions> parse(InputStream inputStream) {
-
-    }
-    private void isRedirected() {
-
-    }
-
+    /*
     private void doesThePageExist() {
         boolean redirected = true;
         NodeList pages = document.getElementsByTagName("pages");
@@ -64,6 +68,6 @@ public class RevisionParser {
             System.out.println("The page does not exist.");
         }
     }
-
+    */
 
 }
