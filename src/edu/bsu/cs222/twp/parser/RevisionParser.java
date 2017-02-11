@@ -2,6 +2,7 @@ package edu.bsu.cs222.twp.parser;
 
 import edu.bsu.cs222.twp.revisions.Revisions;
 import edu.bsu.cs222.twp.url.URLConnector;
+import edu.bsu.cs222.twp.xml.XMLBuilder;
 import org.junit.Assert;
 import org.omg.PortableInterceptor.INACTIVE;
 import org.w3c.dom.Document;
@@ -46,10 +47,8 @@ public class RevisionParser {
     //}
 
     public List<Revisions> parse(InputStream inputStream) throws ParserConfigurationException, IOException, SAXException {
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = factory.newDocumentBuilder();
-        Document document = builder.parse(inputStream);
-
+        XMLBuilder xml = new XMLBuilder();
+        Document document = xml.buildXMLDoc(inputStream);
         List<Revisions> revisionsList = new ArrayList<>();
         NodeList nl = document.getElementsByTagName("rev");
         for (int i = 0; i < nl.getLength(); i++) {
