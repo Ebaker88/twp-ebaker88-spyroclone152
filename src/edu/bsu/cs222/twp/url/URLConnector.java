@@ -11,15 +11,24 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 
-public class URLFactory {
+public class URLConnector {
 
-    private URL url = new URL("https://en.wikipedia.org") ;
-    private Document document;
 
-    public URLFactory() throws MalformedURLException {
+    public InputStream establishURLConnection(String urlPath) throws IOException {
+        URL url = new URL(urlPath);
+        URLConnection connection = url.openConnection();
+        connection.setRequestProperty("User-Agent", "Revision Tracker/0.1 (http://www.cs.bsu.edu/~pvg/courses/cs222Fa16; me@bsu.edu)");
+        return connection.getInputStream();
     }
 
 
+
+
+
+
+
+
+/*
     public void setUpURL(String URLInput) throws IOException {
         URL NewURL = new URL("https://en.wikipedia.org/wiki/" + URLInput);
         URLConnection connection = url.openConnection();
@@ -48,4 +57,5 @@ public class URLFactory {
     public String printURL() throws MalformedURLException {
         return url.toString();
     }
+    */
 }

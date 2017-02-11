@@ -16,6 +16,11 @@ public class Revisions {
         this.timeStamp = revisionElement.getAttribute("timestamp");
     }
 
+    @Override
+    public String toString() {
+        return this.userName + "   " + this.timeStamp;
+    }
+
 
 }
 
