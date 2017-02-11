@@ -8,7 +8,7 @@ import java.net.URLConnection;
 
 public class URLFactory {
 
-    URL url = new URL("https://en.wikipedia.org");
+    private URL url = new URL("https://en.wikipedia.org");
 
     public URLFactory() throws MalformedURLException {
     }
@@ -21,7 +21,7 @@ public class URLFactory {
         url = NewURL;
     }
 
-    public URL printURL() throws MalformedURLException {
-        return url;
+    public String printURL() throws MalformedURLException {
+        return url.toString();
     }
 }
