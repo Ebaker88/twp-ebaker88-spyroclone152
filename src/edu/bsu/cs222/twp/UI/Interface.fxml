@@ -21,8 +21,7 @@
       <TableView prefHeight="200.0" prefWidth="200.0">
         <columns>
           <TableColumn prefWidth="129.0" text="User" />
-          <TableColumn prefWidth="173.0" text="Date Changed" />
-            <TableColumn prefWidth="264.0" text="Comments" />
+          <TableColumn prefWidth="437.0" text="Date Changed" />
         </columns>
       </TableView>
    </children>
