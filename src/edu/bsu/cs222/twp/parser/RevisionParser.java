@@ -47,13 +47,18 @@ public class RevisionParser {
 
     }
 
-    private void isRedirected() {
+    private void doesThePageExist() {
+        boolean redirected = true;
+        Nodelist pages = document.getElementsByTagName("pages");
+        Element page = (Element) pages.item(0);
+        if (page.getAttribute("idx").equals(-1)) {
+            redirected = false;
+            System.out.println("The page does not exist.");
+        }
     }
 
     private String replaceSpaceWithPluses(String articleName) {
         return "";
     }
-
-
 
 }
