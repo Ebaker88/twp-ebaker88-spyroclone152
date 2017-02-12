@@ -2,8 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -17,12 +16,7 @@
             <TextField fx:id="userURL" />
          </children>
       </HBox>
-      <Button alignment="TOP_CENTER" mnemonicParsing="false" onAction="#getWikipediaPageChanges" text="Button" />
-      <TableView prefHeight="200.0" prefWidth="200.0">
-        <columns>
-          <TableColumn prefWidth="566.0" text="User" />
-          <TableColumn minWidth="0.0" prefWidth="0.0" text="Date Changed" />
-        </columns>
-      </TableView>
+      <Button fx:id="bigRedButton" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#getWikipediaPageChanges" text="Get Changes" />
+      <ListView fx:id="listView" prefHeight="200.0" prefWidth="444.0" />
    </children>
 </VBox>
