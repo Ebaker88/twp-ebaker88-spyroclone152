@@ -14,7 +14,7 @@
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="1.0">
          <children>
             <Label text="URL" />
-            <TextField />
+            <TextField fx:id="textField" />
          </children>
       </HBox>
       <Button alignment="TOP_CENTER" mnemonicParsing="false" onAction="#getWikipediaPageChanges" text="Button" />
