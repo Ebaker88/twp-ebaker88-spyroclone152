@@ -18,7 +18,7 @@ public class Controller {
     public TextField userURL = new TextField();
     public InputStream XMLStream;
 
-    //Super Special Awesome Mega Duper Luper Method
+    //Super Special Awesome Mega Duper Luper Method == the big red button that does everything
     public void getWikipediaPageChanges(ActionEvent actionEvent) throws IOException, ParserConfigurationException, SAXException {
         URLConstructor newURL = new URLConstructor();
         newURL.constructURL(String.valueOf(userURL));
@@ -31,6 +31,8 @@ public class Controller {
 
 
         revisions.parse(XMLStream);
+
+
 
 
 
