@@ -1,4 +1,4 @@
-package edu.bsu.cs222.twp;
+package edu.bsu.cs222.twp.xml;
 
 import org.junit.Assert;
 import org.junit.Before;

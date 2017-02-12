@@ -1,4 +1,4 @@
-package edu.bsu.cs222.twp;
+package edu.bsu.cs222.twp.url;
 
 import edu.bsu.cs222.twp.url.URLConnector;
 import org.junit.Assert;
