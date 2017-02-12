@@ -11,17 +11,17 @@
 <VBox alignment="CENTER" prefHeight="358.0" prefWidth="567.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.twp.UI.Controller">
    <children>
       <Label text="Enter A Wkiapedia Page Topic" />
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="1.0">
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="3.0">
          <children>
             <Label text="URL" />
-            <TextField fx:id="textField" />
+            <TextField fx:id="userURL" />
          </children>
       </HBox>
       <Button alignment="TOP_CENTER" mnemonicParsing="false" onAction="#getWikipediaPageChanges" text="Button" />
       <TableView prefHeight="200.0" prefWidth="200.0">
         <columns>
-          <TableColumn prefWidth="129.0" text="User" />
-          <TableColumn prefWidth="437.0" text="Date Changed" />
+          <TableColumn prefWidth="566.0" text="User" />
+          <TableColumn minWidth="0.0" prefWidth="0.0" text="Date Changed" />
         </columns>
       </TableView>
    </children>
