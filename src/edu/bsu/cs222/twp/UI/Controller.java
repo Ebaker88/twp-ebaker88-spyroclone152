@@ -29,7 +29,7 @@ public class Controller {
 
         RevisionParser revisions = new RevisionParser();
 
-asdfsdf
+
         revisions.parse(XMLStream);
 
 
