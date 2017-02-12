@@ -21,13 +21,6 @@ public class URLConnector {
         return connection.getInputStream();
     }
 
-
-
-
-
-
-
-
 /*
     public void setUpURL(String URLInput) throws IOException {
         URL NewURL = new URL("https://en.wikipedia.org/wiki/" + URLInput);
