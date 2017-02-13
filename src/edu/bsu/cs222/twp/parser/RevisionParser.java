@@ -15,7 +15,6 @@ import java.util.List;
 
 public class RevisionParser {
 
-
     public List<Revisions> parse(InputStream inputStream) throws ParserConfigurationException, IOException, SAXException {
         XMLBuilder xml = new XMLBuilder();
         Document document = xml.buildXMLDoc(inputStream);

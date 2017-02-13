@@ -52,8 +52,5 @@ public class Controller {
         vBoxWindow.getChildren().add(listView);
 
 
-
-        System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa");
-
     }
 }
