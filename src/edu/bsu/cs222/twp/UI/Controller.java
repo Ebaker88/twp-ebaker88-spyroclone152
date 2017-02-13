@@ -36,7 +36,6 @@ public class Controller {
         XMLStream = urlConnector.establishURLConnection(urlPath);
         RevisionParser revisions = new RevisionParser();
         List<Revisions> revList  = revisions.parse(XMLStream);
-        //listView.setItems();
         List<String> revStringList = new ArrayList<>();
         for (Revisions rev: revList )
         {

@@ -18,7 +18,7 @@ public class Revisions {
 
     @Override
     public String toString() {
-        return this.userName + "   " + this.timeStamp;
+        return this.userName + "                       " + this.timeStamp;
     }
 
 
