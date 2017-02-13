@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
 import javax.xml.parsers.ParserConfigurationException;
@@ -22,9 +23,9 @@ import java.util.Observable;
 public class Controller {
     public TextField userURL = new TextField();
     public InputStream XMLStream;
-    public javafx.scene.control.ListView listView;
     public Button bigRedButton;
-    public ListView ListView;
+    public ListView listView;
+    public VBox vBoxWindow;
 
 
     //Super Special Awesome Mega Duper Luper Method == the big red button that does everything
@@ -44,8 +45,11 @@ public class Controller {
 
         ObservableList<String> revObsList = FXCollections.observableArrayList(revStringList);
 
+        listView = new ListView<String>();
 
+        listView.setItems(revObsList);
 
+        vBoxWindow.getChildren().add(listView);
 
 
 
