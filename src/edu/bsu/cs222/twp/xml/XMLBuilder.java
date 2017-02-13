@@ -16,5 +16,4 @@ public class XMLBuilder {
         return builder.parse(input);
     }
 
-
 }

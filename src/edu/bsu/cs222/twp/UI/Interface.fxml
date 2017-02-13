@@ -16,5 +16,6 @@
          </children>
       </HBox>
       <Button fx:id="bigRedButton" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#getWikipediaPageChanges" text="Get Changes" />
+      <Label fx:id="redirectedLabel" />
    </children>
 </VBox>
