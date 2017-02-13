@@ -9,7 +9,7 @@ import java.net.URLEncoder;
 public class URLConstructor {
     public String constructURL(String pageName) throws IOException {
         String title = (String) URLEncoder.encode(pageName, "UTF-8");
-        String urlPath = ("https://en.wikipedia.org/w/api.php?action=query&format=xml&prop=revisions&titles=" + title + "&rvprop=timestamp|user&rvlimit=30&redirects");
+        String urlPath = ("https://en.wikipedia.org/w/api.php?action=query&format=xml&prop=revisions&titles=" + title + "&rvprop=timestamp|user&rvlimit=30&RedirectParser");
         return urlPath;
     }
 

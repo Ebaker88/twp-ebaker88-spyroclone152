@@ -6,12 +6,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Interface.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Wikipedia Revisions");
         primaryStage.setScene(new Scene(root, 500, 600));
         primaryStage.show();
     }

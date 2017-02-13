@@ -1,6 +1,7 @@
 package edu.bsu.cs222.twp.UI;
 
 import edu.bsu.cs222.twp.parser.RevisionParser;
+import edu.bsu.cs222.twp.redirects.RedirectParser;
 import edu.bsu.cs222.twp.revisions.Revisions;
 import edu.bsu.cs222.twp.url.URLConnector;
 import edu.bsu.cs222.twp.url.URLConstructor;
@@ -19,7 +20,6 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Controller {
     public TextField userURL = new TextField();
     public InputStream XMLStream;
@@ -29,31 +29,21 @@ public class Controller {
     public Label redirectedLabel;
 
     public void getWikipediaPageChanges(ActionEvent actionEvent) throws IOException, ParserConfigurationException, SAXException {
-        redirectedLabel.setText("You have been redirected");
         URLConstructor newURL = new URLConstructor();
         String urlPath = newURL.constructURL(userURL.getText());
         URLConnector urlConnector = new URLConnector();
         XMLStream = urlConnector.establishURLConnection(urlPath);
         RevisionParser revisions = new RevisionParser();
-        if(!revisions.seeIfRedirected())
-        {
-            redirectedLabel.setText("");
-        }
         List<Revisions> revList  = revisions.parse(XMLStream);
         List<String> revStringList = new ArrayList<>();
         for (Revisions rev: revList )
         {
             revStringList.add(rev.toString());
         }
-
         ObservableList<String> revObsList = FXCollections.observableArrayList(revStringList);
-
         listView = new ListView<String>();
-
         listView.setItems(revObsList);
 
         vBoxWindow.getChildren().add(listView);
-
-
     }
 }

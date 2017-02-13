@@ -13,24 +13,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RevisionParser {
-    private boolean isRedirected = true;
 
     public List<Revisions> parse(InputStream inputStream) throws ParserConfigurationException, IOException, SAXException {
         XMLBuilder xml = new XMLBuilder();
         Document document = xml.buildXMLDoc(inputStream);
         List<Revisions> revisionsList = new ArrayList<>();
         NodeList nl = document.getElementsByTagName("rev");
-        if(document.getElementsByTagName("r") == null)
-        {
-            isRedirected = false;
-        }
         for (int i = 0; i < nl.getLength(); i++) {
             revisionsList.add(new Revisions((Element)nl.item(i)));
         }
         return revisionsList;
-    }
-    public boolean seeIfRedirected()
-    {
-        return isRedirected;
     }
 }

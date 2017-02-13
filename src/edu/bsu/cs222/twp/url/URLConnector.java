@@ -33,7 +33,7 @@ public class URLConnector {
 
     public void setUpTrueURL(String newInput) throws IOException{
         String title = (String)URLEncoder.encode(newInput, "UTF-8");
-        URL wikipediaPage = new URL("https://en.wikipedia.org/w/api.php?action=query&format=xml&prop=revisions&titles=" + title + "&rvprop=timestamp|user&rvlimit=4&redirects");
+        URL wikipediaPage = new URL("https://en.wikipedia.org/w/api.php?action=query&format=xml&prop=revisions&titles=" + title + "&rvprop=timestamp|user&rvlimit=4&RedirectParser");
         URLConnection connection = url.openConnection();
         connection.setRequestProperty("User-Agent", "Revision Tracker/0.1 (http://www.cs.bsu.edu/~pvg/courses/cs222Fa16; me@bsu.edu)");
         InputStream in = connection.getInputStream();
