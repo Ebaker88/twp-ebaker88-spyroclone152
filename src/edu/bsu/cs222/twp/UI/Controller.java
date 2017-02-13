@@ -1,7 +1,6 @@
 package edu.bsu.cs222.twp.UI;
 
 import edu.bsu.cs222.twp.parser.RevisionParser;
-import edu.bsu.cs222.twp.redirects.RedirectParser;
 import edu.bsu.cs222.twp.revisions.Revisions;
 import edu.bsu.cs222.twp.url.URLConnector;
 import edu.bsu.cs222.twp.url.URLConstructor;

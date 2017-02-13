@@ -33,13 +33,4 @@ public class XMLParserTest {
         Assert.assertEquals("api", rssElement.getNodeName());
 
     }
-    @Test
-    public void testReadFirstNewsItemTitle() {
-        NodeList items = document.getElementsByTagName("item");
-        Element firstItem = (Element)items.item(0);
-        NodeList titles = firstItem.getElementsByTagName("title");
-        Element title = (Element)titles.item(0);
-        Assert.assertEquals("d", title.getTextContent());
-
-    }
 }

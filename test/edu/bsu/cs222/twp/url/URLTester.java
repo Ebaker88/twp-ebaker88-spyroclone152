@@ -10,13 +10,10 @@ public class URLTester {
 
     @Test
     public void testCatURL() throws IOException {
-
-    }
-
-    @Test
-    public void testXMLConnection() throws IOException {
-
-
-
+        URLConstructor catURL = new URLConstructor();
+        catURL.constructURL("cat");
+        Assert.assertTrue(catURL.constructURL("cat").equals("https://en.wikipedia.org/w/api.php?action=query&format=xml&prop=revisions&titles=cat" +
+                "&rvprop=timestamp|user&rvlimit=30&RedirectParser"));
     }
 }
+
