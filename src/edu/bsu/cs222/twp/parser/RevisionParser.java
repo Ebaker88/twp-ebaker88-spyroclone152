@@ -20,8 +20,7 @@ public class RevisionParser {
         Document document = xml.buildXMLDoc(inputStream);
         List<Revisions> revisionsList = new ArrayList<>();
         NodeList nl = document.getElementsByTagName("rev");
-        System.out.println(document.getElementsByTagName("r").item(0));
-        if(document.getElementsByTagName("r").item(0) == null)
+        if(document.getElementsByTagName("r") == null)
         {
             isRedirected = false;
         }

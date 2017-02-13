@@ -28,7 +28,6 @@ public class Controller {
     public VBox vBoxWindow;
     public Label redirectedLabel;
 
-
     public void getWikipediaPageChanges(ActionEvent actionEvent) throws IOException, ParserConfigurationException, SAXException {
         redirectedLabel.setText("You have been redirected");
         URLConstructor newURL = new URLConstructor();
